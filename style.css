@@ -1,0 +1,531 @@
+/* fonts google font ekleme */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* burdan tum sayfaya yazı fontu ıslemı uygulandı */
+    font-family: 'Poppins';
+}
+
+/* header kısmı */
+.navbar{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    /* sagdan ve soldan ortalar yukardan ve asagıdan 20px dıs bosluk bırakır. */
+    margin: 20px auto;
+    padding: 20px 0;
+}
+/* header sol kısım */
+.navbar-left{
+    display: flex;
+    gap: 40px;
+
+    
+
+}
+/* header sol kısım ıcındekı logo */
+.navbar-left-title{
+    font-family: 'Indie Flower';
+    text-decoration: none;
+    line-height: 39px;/* satır yüksekligi */ 
+    font-size: 44px;
+    color: rgb(22, 60, 22);
+}
+/* logonun uzerıne gelınce  */
+.navbar-left-title:hover{ 
+    transform: scale(1.1);
+    /* islemin gerceklesme hızı */
+    transition: ease .5s;
+
+}
+
+/* header sol kısım ıcındekı menu */
+.navbar-left-menu{
+    display: flex;
+    flex-direction: row;/*varsayılan row oluyor zaten */
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-left-menu a{
+    text-decoration: none;
+    font-size: 18px;
+    color: gray;
+
+}
+/* navbar-left-menu ıcındekı 1. a etıketı */
+.navbar-left-menu a:nth-child(1){
+    color: black;
+    font-weight: 700;
+
+}
+
+.navbar-left-menu a:hover{
+    color: green;
+}
+
+
+/* header sag kısım */
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.navbar-right i{
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.navbar-right i:hover{
+    color: gray;
+    transform: scale(1.2);
+    transition: ease .5s;
+}
+
+
+/* banner */
+.banner{
+    display: flex;
+    background-color: #c1dcdc;
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+}
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 40px  40px 50px;
+    gap: 40px;
+    z-index: 2;
+    /* cakıstıgı zaman yapılacak ıslem */
+}
+
+
+@media screen and (max-width:980px) {
+    .banner-left-title{
+        background-color: white;
+        opacity: 0.8;
+        border-radius: 20px;
+        padding: 10px;
+        
+    }
+    .banner-left-content{
+        background-color: white;
+        opacity: 0.8;
+        border-radius: 20px;
+        padding: 10px;
+
+    }
+
+}
+
+.banner-left-title{
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    width: 480px;
+
+}
+.banner-left-content{
+    display: flex;
+    gap: 50px;
+}
+
+.contents:nth-child(1){ 
+    border-right: 1px solid black;
+    padding-right: 50px;
+}
+
+.contents p{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.contents span{
+    font-size: 18px;
+}
+
+.banner-left-search{
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.banner-left-search input{
+    border: none;  /*normal kosegen */
+    outline: none; /*  focuslandıgımız zamanda cıkan kosegen*/
+    width: 80%;
+    font-size: 18px;
+}
+.banner-left-search i{
+    background-color: #c1dcdc;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.banner-right{
+    width: 100%;
+    position: relative;
+}
+.banner-right-bg{
+    position: absolute; /* relatıve oldugu kısıma gore absolute yapısını kullanıyoruz*/
+    background-color: gray;
+    width: 400px;
+    height: 360px;
+    bottom: 0;
+    right: 10%;
+    border-radius: 50% 20% 0px 50%;
+}
+.banner-right-bg img{
+    position: absolute;
+    top: -130px;
+    transform: scaleX(-1);/* aynalama*/
+
+}
+
+/* products */
+.product{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product-title{
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*flex directions: column ise yani dkey ise yataya göre hizalar,yatay ise dikey genislikte hizalar.*/
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    gap: 10px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.more{
+    background-color: #c1dcdc;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.product-card{
+    /* flex: 1.5;ustteki flexe göre 1.5 kat daha fazla alan kaplar */
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.products-cards{
+    width: 100%;/* cardlarrın tasmaması ıcın yapıldı*/
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.products-cards img{
+    width: 100%;/*cardlar fazla olursa ve ekrandan tasarsa dıye yazıldı*/
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card p {
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.product-card span{
+    color: gray;
+    font-size: 18px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(63, 57, 57, 0.278);
+    width: 100%;
+    padding: 20px 0;
+    
+}
+
+.about-title{
+    
+}
+
+.about-title h1{
+    font-size: 32px;
+    text-align: center;
+}
+
+.about-title p{
+    font-size: 18px;
+    color: gray;
+}
+.about-card{
+    display: flex;
+    width: 90%;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.about-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;/*aynı esneklige getirdik tüm kartları yada width 100 yaparsak da aynı ıslem olacaktır.*/
+}
+
+.about-cards span{
+    text-align: center;
+}
+
+.about-cards i{
+    font-size: 42px;
+    background-color: #c1dcdc;
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+.about-cards p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.about-cards span{
+    text-align: center;
+    /* satır verme ve tasan kısma ... ekleme islemi */
+    overflow: hidden;/*tasan kısım ıcın*/
+    display: -webkit-box;
+    -webkit-line-clamp: 2;/*satır sayısı*/
+    -webkit-box-orient: vertical;/*dikey hizada satır ozellıgı aktıf edılır*/
+}
+
+
+/* kategoriler */
+.categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin: 20px auto;
+
+}
+
+.categories-title{
+    margin-bottom: 30px;
+}
+
+.categories-title p{
+    text-align: center;
+}
+
+.categories-title h1{
+    font-weight: 700;
+    font-size: 32px;
+    
+}
+
+.categories-banners{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+}
+
+.categories-banners-card{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+ .categories-banners-card img{
+    width: 100%;
+}
+
+
+.categories-banners-card h1{
+    text-align: center;
+    
+}
+
+.categories-banners-card span{
+    text-align: center;
+    color: gray;
+    width: 100%;
+}
+.categories-banners-card button{
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #c1dcdc;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.footer-left{
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media only screen and (min-width: 546px) and (max-width: 1024px){
+    .footer-left{
+        margin: auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 545px){
+    .footer-left{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.footer-left h1{
+    font-family: 'Indie Flower';
+    margin: 0;
+}
+
+@media only screen and (min-width: 546px) and (max-width: 1024px){
+    .footer-left h1{
+        font-family: 52px;
+    }
+}
+
+@media only screen and (max-width: 545px){
+    .footer-left h1{
+        font-size: 52px;
+    }
+}
+
+.footer-left p{
+    margin: 0;
+    font-size: 18px;
+    color: rgba(30, 30, 30, 0.5);
+}
+
+.sosial-media{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+@media only screen and(min-width: 546px) and (max-width: 1024px) {
+    .sosial-media{
+        justify-content: center;
+    }
+}
+
+.sosial-media i{
+    color: #566060;
+    padding: 20px;
+    border: 1px solid rgba(30, 30, 30, 0.5);
+    border-radius: 50%;
+}
+
+.sosial-media i:hover{
+    transform: scale(1.1);
+    color: black;
+}
+
+.footer-left-rights{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 545px){
+    .footer-left-rights{
+        font-size: 13px;
+    }
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 80px;
+}
+
+@media only screen and (min-width: 546px) and (max-width: 1024px){
+    .footer-right{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .footer-right{
+        display: none;
+    }
+}
+
+.footer-right ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.footer-right ul li{
+    list-style-type: square;
+    font-size: 18px;
+    font-family: 'Poppins';
+    cursor: pointer;
+
+}
+
+.footer-right ul li:nth-child(1){
+    font-size: 20px;
+    list-style-type: none;
+    font-weight: 800;
+}
+
+.footer-right ul li:hover{
+    transform: scale(1.1);
+    color: gray;
+}
+
+
+
+/* 0 dan 545px kadar olan kısım mesela mobil icin */
+@media screen and (max-width:545px) {
+    .categories-banners-card{
+        background-color: red;
+        font-size: 20px;
+        }
+
+        .categories-banners-card span{
+            font-size: 15px;
+        }
+        }
